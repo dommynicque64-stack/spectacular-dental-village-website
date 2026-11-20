@@ -1,0 +1,371 @@
+@import "tailwindcss";
+
+@theme {
+  /* ---------------------------------------------------------------------------
+   * SPECTACULAR DENTAL VILLAGE — colour system
+   * A balanced palette of baby pink, burgundy and white. Solid colours only —
+   * no gradients are used anywhere on this website.
+   * ------------------------------------------------------------------------- */
+
+  /* Burgundy — primary brand colour: headings, navigation, buttons, highlights */
+  --color-brand: #630625;
+  --color-brand-deep: #47051c;
+  --color-brand-mid: #7e0a30;
+  --color-brand-tint: #fbe3e8;
+
+  /* Pink — primary website background */
+  --color-pink: #fdc3d1;
+
+  /* Blush — very light pink for inner panels and chips */
+  --color-blush: #fceef1;
+
+  /* Berry — secondary accent for eyebrows, links, icons and secondary buttons */
+  --color-accent: #8e2140;
+  --color-accent-deep: #73172f;
+  --color-accent-tint: #fce3e7;
+
+  /* Rose — refined highlight for rules, badges and decorative accents */
+  --color-highlight: #c2596b;
+  --color-rose: #e9a3b0;
+  --color-highlight-deep: #93304a;
+  --color-highlight-tint: #fce3e7;
+
+  /* Neutrals — warm plum tones for text, borders and white surfaces */
+  --color-ink: #3a1f2b;
+  --color-muted: #5f444e;
+  --color-line: #ebb9c0;
+  --color-white: #ffffff;
+
+  --font-display: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --shadow-soft: 0 1px 2px rgba(99, 6, 37, 0.05), 0 8px 24px rgba(99, 6, 37, 0.08);
+  --shadow-lift: 0 2px 6px rgba(99, 6, 37, 0.07), 0 18px 44px rgba(99, 6, 37, 0.14);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    color: var(--color-ink);
+    background-color: var(--color-pink);
+    font-synthesis-weight: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    color: var(--color-brand);
+    letter-spacing: -0.015em;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  section[id] {
+    scroll-margin-top: 78px;
+  }
+
+  @media (min-width: 1024px) {
+    section[id] {
+      scroll-margin-top: 128px;
+    }
+  }
+
+  iframe {
+    border: 0;
+  }
+}
+
+@layer components {
+  .container-page {
+    width: 100%;
+    margin-inline: auto;
+    max-width: 1240px;
+    padding-inline: 1.25rem;
+  }
+
+  @media (min-width: 768px) {
+    .container-page {
+      padding-inline: 2rem;
+    }
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.55rem;
+    border-radius: 9999px;
+    padding: 0.85rem 1.6rem;
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: background-color 180ms ease, color 180ms ease, border-color 180ms ease,
+      transform 180ms ease, box-shadow 180ms ease;
+    cursor: pointer;
+    white-space: nowrap;
+    max-width: 100%;
+  }
+
+  .btn:active {
+    transform: translateY(1px);
+  }
+
+  @media (hover: hover) and (prefers-reduced-motion: no-preference) {
+    .btn:not(:disabled):hover {
+      transform: translateY(-2px);
+    }
+
+    header button:hover {
+      transform: translateY(-1px);
+    }
+  }
+
+  /* Very narrow screens: allow long labels to wrap instead of overflowing */
+  @media (max-width: 420px) {
+    .btn {
+      white-space: normal;
+    }
+  }
+
+  /* Grid children may always shrink — prevents horizontal page overflow */
+  .grid > * {
+    min-width: 0;
+  }
+
+  /* Burgundy — primary action */
+  .btn-primary {
+    background-color: var(--color-brand);
+    color: #fff;
+    box-shadow: 0 10px 24px rgba(99, 6, 37, 0.24);
+  }
+  .btn-primary:hover {
+    background-color: var(--color-brand-deep);
+  }
+
+  /* Berry — secondary action */
+  .btn-accent {
+    background-color: var(--color-accent);
+    color: #fff;
+    box-shadow: 0 10px 24px rgba(142, 33, 64, 0.24);
+  }
+  .btn-accent:hover {
+    background-color: var(--color-accent-deep);
+  }
+
+  /* Rose — tertiary / soft emphasis */
+  .btn-highlight {
+    background-color: var(--color-highlight);
+    color: #fff;
+  }
+  .btn-highlight:hover {
+    background-color: var(--color-highlight-deep);
+  }
+
+  /* White on pink — stands out against the baby pink background */
+  .btn-white {
+    background-color: #fff;
+    color: var(--color-brand);
+    box-shadow: 0 10px 24px rgba(99, 6, 37, 0.14);
+  }
+  .btn-white:hover {
+    background-color: var(--color-blush);
+  }
+
+  .btn-outline {
+    background-color: transparent;
+    color: var(--color-brand);
+    border: 1.5px solid var(--color-highlight);
+  }
+  .btn-outline:hover {
+    border-color: var(--color-brand);
+    background-color: var(--color-blush);
+  }
+
+  .btn-outline-light {
+    background-color: transparent;
+    color: #fff;
+    border: 1.5px solid rgba(255, 255, 255, 0.42);
+  }
+  .btn-outline-light:hover {
+    border-color: #fff;
+    background-color: rgba(255, 255, 255, 0.14);
+  }
+
+  .btn-sm {
+    padding: 0.6rem 1.15rem;
+    font-size: 0.72rem;
+  }
+
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    font-family: var(--font-display);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+  }
+
+  .eyebrow::before {
+    content: "";
+    width: 28px;
+    height: 2px;
+    background-color: var(--color-highlight);
+    display: inline-block;
+  }
+
+  .card-surface {
+    background-color: #fff;
+    border: 1px solid var(--color-line);
+    border-radius: 1.25rem;
+    box-shadow: var(--shadow-soft);
+  }
+
+  .field-label {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-brand);
+    margin-bottom: 0.45rem;
+  }
+
+  .field-control {
+    width: 100%;
+    border-radius: 0.75rem;
+    border: 1.5px solid var(--color-line);
+    background-color: #fff;
+    padding: 0.8rem 0.95rem;
+    font-size: 0.95rem;
+    color: var(--color-ink);
+    transition: border-color 160ms ease, box-shadow 160ms ease;
+  }
+
+  .field-control::placeholder {
+    color: #b08e99;
+  }
+
+  .field-control:hover {
+    border-color: #dda2ab;
+  }
+
+  .field-control:focus {
+    outline: none;
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 3px rgba(142, 33, 64, 0.16);
+  }
+
+  .field-control[aria-invalid="true"] {
+    border-color: #b3243a;
+  }
+
+  .field-control[aria-invalid="true"]:focus {
+    box-shadow: 0 0 0 3px rgba(179, 36, 58, 0.16);
+  }
+
+  select.field-control {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9'%3E%3Cpath d='M1 1l6 6 6-6' fill='none' stroke='%235F444E' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    padding-right: 2.4rem;
+  }
+}
+
+/* Gentle fade-in on scroll */
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 700ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@keyframes sdv-hero-enter {
+  from {
+    opacity: 0;
+    transform: translate3d(-18px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.hero-copy {
+  animation: sdv-hero-enter 850ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .hero-copy {
+    animation: none;
+  }
+  .btn,
+  .card-surface,
+  a,
+  button {
+    transition: none !important;
+  }
+}
+
+/* Floating action buttons */
+@keyframes sdv-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.float-slow {
+  animation: sdv-float 4.5s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .float-slow {
+    animation: none;
+  }
+}
+
+/* Thin, branded scrollbar for horizontal rails */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
