@@ -30,7 +30,7 @@ export default function SectionHeading({
     >
       {eyebrow ? (
         <Reveal>
-          <p className={cn("eyebrow", centered && "justify-center", light && "text-rose")}>
+          <p className={cn("eyebrow", centered && "justify-center", light && "text-brand-tint")}>
             {eyebrow}
           </p>
         </Reveal>

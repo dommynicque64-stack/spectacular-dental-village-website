@@ -23,7 +23,7 @@ export default function Hero() {
         <div className="absolute inset-0 flex items-center">
           <div className="container-page">
             <div className="hero-copy max-w-xl rounded-3xl border border-white/20 bg-brand-deep/80 p-6 text-white shadow-lift backdrop-blur-sm sm:p-9 lg:p-11">
-              <p className="font-display text-xs font-semibold uppercase tracking-[0.2em] text-rose sm:text-sm">
+              <p className="font-display text-xs font-semibold uppercase tracking-[0.2em] text-brand-tint sm:text-sm">
                 Your trusted partner in oral health
               </p>
               <h1 className="mt-4 font-display text-[2rem] font-bold leading-[1.08] tracking-tight text-white sm:text-5xl lg:text-6xl">
@@ -32,7 +32,7 @@ export default function Hero() {
               <p className="mt-5 max-w-md text-sm leading-relaxed text-white/85 sm:text-base">
                 Compassionate dental care for every smile in Kayole, Spine Road.
               </p>
-              <a href="#booking" className="btn btn-white mt-7">
+              <a href="#booking" className="btn btn-primary mt-7">
                 Book an Appointment
               </a>
             </div>

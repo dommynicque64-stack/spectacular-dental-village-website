@@ -15,7 +15,7 @@ export default function Team() {
 
         <Reveal delay={90}>
           <div className="mx-auto mt-8 flex max-w-3xl items-start gap-3 rounded-2xl border border-highlight/50 bg-highlight-tint px-5 py-4 text-left">
-            <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-highlight text-white">
+            <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-highlight text-brand">
               <InfoIcon className="h-4 w-4" />
             </span>
             <p className="text-[0.88rem] leading-relaxed text-highlight-deep">

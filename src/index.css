@@ -3,44 +3,43 @@
 @theme {
   /* ---------------------------------------------------------------------------
    * SPECTACULAR DENTAL VILLAGE — colour system
-   * A balanced palette of baby pink, burgundy and white. Solid colours only —
-   * no gradients are used anywhere on this website.
+   * Green, purple, mint, lavender and white. Solid colours only — no gradients.
    * ------------------------------------------------------------------------- */
 
-  /* Burgundy — primary brand colour: headings, navigation, buttons, highlights */
-  --color-brand: #630625;
-  --color-brand-deep: #47051c;
-  --color-brand-mid: #7e0a30;
-  --color-brand-tint: #fbe3e8;
+  /* Deep forest green — headings, navigation and important content */
+  --color-brand: #315b38;
+  --color-brand-deep: #315b38;
+  --color-brand-mid: #6bd04e;
+  --color-brand-tint: #f2faef;
 
-  /* Pink — primary website background */
-  --color-pink: #fdc3d1;
+  /* Light mint green — primary section background */
+  --color-pink: #f2faef;
 
-  /* Blush — very light pink for inner panels and chips */
-  --color-blush: #fceef1;
+  /* Soft lavender — secondary panels and chips */
+  --color-blush: #f3eaf5;
 
-  /* Berry — secondary accent for eyebrows, links, icons and secondary buttons */
-  --color-accent: #8e2140;
-  --color-accent-deep: #73172f;
-  --color-accent-tint: #fce3e7;
+  /* Purple — secondary accent for links, icons and buttons */
+  --color-accent: #984f9b;
+  --color-accent-deep: #984f9b;
+  --color-accent-tint: #f3eaf5;
 
-  /* Rose — refined highlight for rules, badges and decorative accents */
-  --color-highlight: #c2596b;
-  --color-rose: #e9a3b0;
-  --color-highlight-deep: #93304a;
-  --color-highlight-tint: #fce3e7;
+  /* Primary green — highlights, badges and decorative accents */
+  --color-highlight: #6bd04e;
+  --color-rose: #984f9b;
+  --color-highlight-deep: #315b38;
+  --color-highlight-tint: #f2faef;
 
-  /* Neutrals — warm plum tones for text, borders and white surfaces */
-  --color-ink: #3a1f2b;
-  --color-muted: #5f444e;
-  --color-line: #ebb9c0;
+  /* Brand colours for text and borders */
+  --color-ink: #315b38;
+  --color-muted: rgb(49 91 56 / 0.78);
+  --color-line: #f3eaf5;
   --color-white: #ffffff;
 
   --font-display: "Poppins", ui-sans-serif, system-ui, sans-serif;
   --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
 
-  --shadow-soft: 0 1px 2px rgba(99, 6, 37, 0.05), 0 8px 24px rgba(99, 6, 37, 0.08);
-  --shadow-lift: 0 2px 6px rgba(99, 6, 37, 0.07), 0 18px 44px rgba(99, 6, 37, 0.14);
+  --shadow-soft: 0 1px 2px rgba(49, 91, 56, 0.05), 0 8px 24px rgba(49, 91, 56, 0.08);
+  --shadow-lift: 0 2px 6px rgba(49, 91, 56, 0.07), 0 18px 44px rgba(49, 91, 56, 0.14);
 }
 
 @layer base {
@@ -147,43 +146,44 @@
     min-width: 0;
   }
 
-  /* Burgundy — primary action */
+  /* Green — primary action */
   .btn-primary {
-    background-color: var(--color-brand);
-    color: #fff;
-    box-shadow: 0 10px 24px rgba(99, 6, 37, 0.24);
+    background-color: var(--color-highlight);
+    color: var(--color-brand);
+    box-shadow: 0 10px 24px rgba(49, 91, 56, 0.18);
   }
   .btn-primary:hover {
     background-color: var(--color-brand-deep);
+    color: #fff;
   }
 
-  /* Berry — secondary action */
+  /* Purple — secondary action */
   .btn-accent {
     background-color: var(--color-accent);
     color: #fff;
-    box-shadow: 0 10px 24px rgba(142, 33, 64, 0.24);
+    box-shadow: 0 10px 24px rgba(152, 79, 155, 0.22);
   }
   .btn-accent:hover {
     background-color: var(--color-accent-deep);
   }
 
-  /* Rose — tertiary / soft emphasis */
+  /* Green — tertiary / soft emphasis */
   .btn-highlight {
     background-color: var(--color-highlight);
-    color: #fff;
+    color: var(--color-brand);
   }
   .btn-highlight:hover {
     background-color: var(--color-highlight-deep);
   }
 
-  /* White on pink — stands out against the baby pink background */
+  /* White — stands out against tinted backgrounds */
   .btn-white {
     background-color: #fff;
     color: var(--color-brand);
-    box-shadow: 0 10px 24px rgba(99, 6, 37, 0.14);
+    box-shadow: 0 10px 24px rgba(49, 91, 56, 0.14);
   }
   .btn-white:hover {
-    background-color: var(--color-blush);
+    background-color: var(--color-brand-tint);
   }
 
   .btn-outline {
@@ -261,17 +261,17 @@
   }
 
   .field-control::placeholder {
-    color: #b08e99;
+    color: rgba(49, 91, 56, 0.6);
   }
 
   .field-control:hover {
-    border-color: #dda2ab;
+    border-color: var(--color-accent);
   }
 
   .field-control:focus {
     outline: none;
     border-color: var(--color-accent);
-    box-shadow: 0 0 0 3px rgba(142, 33, 64, 0.16);
+    box-shadow: 0 0 0 3px rgba(152, 79, 155, 0.16);
   }
 
   .field-control[aria-invalid="true"] {
@@ -284,7 +284,7 @@
 
   select.field-control {
     appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9'%3E%3Cpath d='M1 1l6 6 6-6' fill='none' stroke='%235F444E' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9'%3E%3Cpath d='M1 1l6 6 6-6' fill='none' stroke='%23315B38' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-position: right 1rem center;
     padding-right: 2.4rem;

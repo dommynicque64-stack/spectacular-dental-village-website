@@ -121,13 +121,12 @@ export default function Booking() {
   };
 
   return (
-    <section id="booking" className="bg-brand py-16 lg:py-24">
+    <section id="booking" className="bg-pink py-16 lg:py-24">
       <div className="container-page grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
         {/* Left column */}
         <div>
           <SectionHeading
             align="left"
-            light
             eyebrow="Appointments"
             title="Book Your Dental Appointment"
             description="Tell us when you would like to come in and what you need help with. Our team will call you to confirm your slot."
@@ -153,14 +152,14 @@ export default function Booking() {
                 },
               ].map((item) => (
                 <li key={item.title} className="flex gap-4">
-                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white/15 text-rose">
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-accent-tint text-accent">
                     {item.icon}
                   </span>
                   <div>
-                    <p className="font-display text-[0.98rem] font-semibold text-white">
+                    <p className="font-display text-[0.98rem] font-semibold text-brand">
                       {item.title}
                     </p>
-                    <p className="mt-1 text-[0.88rem] leading-relaxed text-white/70">{item.text}</p>
+                    <p className="mt-1 text-[0.88rem] leading-relaxed text-muted">{item.text}</p>
                   </div>
                 </li>
               ))}
@@ -168,7 +167,7 @@ export default function Booking() {
           </Reveal>
 
           <Reveal delay={170}>
-            <div className="mt-9 flex flex-col gap-3 border-t border-white/15 pt-7 sm:flex-row">
+            <div className="mt-9 flex flex-col gap-3 border-t border-line pt-7 sm:flex-row">
               <a
                 href={whatsappLink(
                   `Hello ${CLINIC.name}, I would like to book a dental appointment. Please let me know the next available slot.`,
@@ -180,7 +179,7 @@ export default function Booking() {
                 <WhatsAppIcon className="h-4 w-4" />
                 Book on WhatsApp
               </a>
-              <a href={telLink} className="btn btn-outline-light">
+              <a href={telLink} className="btn btn-outline">
                 <PhoneIcon className="h-4 w-4" />
                 {CLINIC.phoneDisplay}
               </a>

@@ -3,7 +3,6 @@ import {
   ArrowRightIcon,
   ClockIcon,
   FacebookIcon,
-  Logo,
   PhoneIcon,
   PinIcon,
   WhatsAppIcon,
@@ -18,12 +17,18 @@ export default function Footer() {
         {/* Brand */}
         <div>
           <div className="flex items-center gap-3">
-            <Logo className="h-12 w-12" />
+            <img
+              src="/spectacular-dental-village-logo.png"
+              alt="Spectacular Dental Village"
+              className="h-12 w-12 shrink-0 object-contain"
+              width={48}
+              height={48}
+            />
             <span className="leading-none">
               <span className="block font-display text-[1.05rem] font-bold tracking-tight text-white">
                 SPECTACULAR
               </span>
-              <span className="mt-1 block font-display text-[0.62rem] font-semibold tracking-[0.28em] text-rose">
+              <span className="mt-1 block font-display text-[0.62rem] font-semibold tracking-[0.28em] text-brand-tint">
                 DENTAL VILLAGE
               </span>
             </span>
@@ -41,7 +46,7 @@ export default function Footer() {
               target="_blank"
               rel="noreferrer noopener"
               aria-label="Facebook"
-              className="flex h-11 w-11 items-center justify-center rounded-full border border-white/20 text-white transition-colors hover:border-white hover:bg-white hover:text-brand"
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-white transition-colors hover:border-white hover:bg-white"
             >
               <FacebookIcon className="h-4 w-4" />
             </a>
@@ -50,7 +55,7 @@ export default function Footer() {
               target="_blank"
               rel="noreferrer noopener"
               aria-label="WhatsApp"
-              className="flex h-11 w-11 items-center justify-center rounded-full border border-white/20 text-white transition-colors hover:border-accent hover:bg-accent"
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-white transition-colors hover:border-white hover:bg-white"
             >
               <WhatsAppIcon className="h-4 w-4" />
             </a>
@@ -66,7 +71,7 @@ export default function Footer() {
 
         {/* Quick links */}
         <nav aria-label="Footer quick links">
-          <h3 className="font-display text-[0.78rem] font-semibold uppercase tracking-[0.16em] text-rose">
+          <h3 className="font-display text-[0.78rem] font-semibold uppercase tracking-[0.16em] text-brand-tint">
             Quick Links
           </h3>
           <ul className="mt-6 space-y-3">
@@ -76,7 +81,7 @@ export default function Footer() {
                   href={link.href}
                   className="inline-flex items-center gap-2 text-[0.9rem] transition-colors hover:text-white"
                 >
-                  <span className="h-1 w-1 rounded-full bg-rose" />
+                  <span className="h-1 w-1 rounded-full bg-highlight" />
                   {link.label}
                 </a>
               </li>
@@ -86,7 +91,7 @@ export default function Footer() {
 
         {/* Services */}
         <nav aria-label="Dental services">
-          <h3 className="font-display text-[0.78rem] font-semibold uppercase tracking-[0.16em] text-rose">
+          <h3 className="font-display text-[0.78rem] font-semibold uppercase tracking-[0.16em] text-brand-tint">
             Dental Services
           </h3>
           <ul className="mt-6 space-y-3">
@@ -106,7 +111,7 @@ export default function Footer() {
 
         {/* Contact */}
         <div>
-          <h3 className="font-display text-[0.78rem] font-semibold uppercase tracking-[0.16em] text-rose">
+          <h3 className="font-display text-[0.78rem] font-semibold uppercase tracking-[0.16em] text-brand-tint">
             Get in Touch
           </h3>
 
@@ -129,7 +134,7 @@ export default function Footer() {
               </a>
             </li>
             <li className="flex gap-3">
-              <WhatsAppIcon className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
+              <WhatsAppIcon className="mt-0.5 h-4 w-4 shrink-0 rounded-full bg-white" />
               <a
                 href={whatsappLink(`Hello ${CLINIC.name}, I have an enquiry.`)}
                 target="_blank"
@@ -141,7 +146,7 @@ export default function Footer() {
             </li>
           </ul>
 
-          <h4 className="mt-8 flex items-center gap-2 font-display text-[0.78rem] font-semibold uppercase tracking-[0.16em] text-rose">
+          <h4 className="mt-8 flex items-center gap-2 font-display text-[0.78rem] font-semibold uppercase tracking-[0.16em] text-brand-tint">
             <ClockIcon className="h-4 w-4" />
             Opening Hours
           </h4>
@@ -162,7 +167,7 @@ export default function Footer() {
             </a>
             <a
               href="#booking"
-              className="inline-flex items-center gap-1.5 font-display text-[0.72rem] font-semibold uppercase tracking-[0.14em] text-highlight transition-colors hover:text-white"
+              className="inline-flex items-center gap-1.5 font-display text-[0.72rem] font-semibold uppercase tracking-[0.14em] text-brand-tint transition-colors hover:text-white"
             >
               Book now
               <ArrowRightIcon className="h-3.5 w-3.5" />

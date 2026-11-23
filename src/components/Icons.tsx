@@ -13,7 +13,7 @@ export function ToothMark({ className = "h-9 w-9", ...props }: IconProps) {
       />
       <path
         d="M37.5 10.5l1.35 3.35L42.2 15.2l-3.35 1.35L37.5 19.9l-1.35-3.35L32.8 15.2l3.35-1.35 1.35-3.35Z"
-        fill="#C2596B"
+        fill="#984F9B"
       />
     </svg>
   );
@@ -182,7 +182,7 @@ export function WalletIcon(props: IconProps) {
 
 export function FacebookIcon(props: IconProps) {
   return (
-    <svg viewBox="0 0 24 24" className="h-5 w-5" aria-hidden="true" fill="currentColor" {...props}>
+    <svg viewBox="0 0 24 24" className="h-5 w-5" aria-hidden="true" fill="#1877F2" {...props}>
       <path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5h1.65V3.6c-.3-.04-1.3-.13-2.45-.13-2.43 0-4.1 1.49-4.1 4.21V9.9H7.5V13h2.65v8h3.35Z" />
     </svg>
   );
@@ -190,7 +190,7 @@ export function FacebookIcon(props: IconProps) {
 
 export function WhatsAppIcon(props: IconProps) {
   return (
-    <svg viewBox="0 0 24 24" className="h-5 w-5" aria-hidden="true" fill="currentColor" {...props}>
+    <svg viewBox="0 0 24 24" className="h-5 w-5" aria-hidden="true" fill="#25D366" {...props}>
       <path d="M12.04 2C6.6 2 2.2 6.4 2.2 11.84c0 1.9.52 3.68 1.44 5.2L2 22l5.1-1.6a9.8 9.8 0 0 0 4.94 1.32h.01c5.43 0 9.84-4.4 9.84-9.84C21.89 6.4 17.48 2 12.04 2Zm5.75 14.06c-.24.68-1.4 1.3-1.94 1.34-.5.05-1.12.09-1.8-.11-.42-.13-.95-.31-1.63-.6-2.87-1.24-4.74-4.13-4.88-4.32-.14-.2-1.16-1.54-1.16-2.94s.73-2.08 1-2.37c.26-.29.57-.36.76-.36h.55c.18 0 .41-.07.64.49.24.57.8 1.97.87 2.11.07.14.12.31.02.5-.09.19-.14.31-.27.47-.14.16-.29.36-.41.48-.14.14-.28.29-.12.57.16.29.72 1.18 1.54 1.91 1.06.94 1.95 1.24 2.23 1.37.28.14.44.12.6-.07.17-.19.7-.81.88-1.09.19-.29.37-.24.63-.14.25.09 1.65.78 1.93.92.28.14.47.21.54.33.07.12.07.69-.17 1.37Z" />
     </svg>
   );
@@ -269,14 +269,14 @@ export function ClinicIcon(props: IconProps) {
 export function Logo({ className = "h-11 w-11" }: { className?: string }) {
   return (
     <svg viewBox="0 0 48 48" className={className} aria-hidden="true" fill="none">
-      <rect width="48" height="48" rx="13" fill="#630625" />
+      <rect width="48" height="48" rx="13" fill="#315B38" />
       <path
         d="M24 8c-4.3 0-7.7 1.9-10.3 6.4-2.6 4.4-2 9.8-0.8 15.5 1 5 2.7 11.5 5.8 12.6 2.7.9 3.2-5.9 4.8-5.9s2.1 6.8 4.8 5.9c3.1-1.1 4.8-7.6 5.8-12.6 1.2-5.7 1.8-11.1-.8-15.5C31.7 9.9 28.3 8 24 8Z"
         fill="#FFFFFF"
       />
       <path
         d="M37.2 11.2l1.2 3 3 1.2-3 1.2-1.2 3-1.2-3-3-1.2 3-1.2 1.2-3Z"
-        fill="#C2596B"
+        fill="#984F9B"
       />
     </svg>
   );

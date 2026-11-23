@@ -7,7 +7,7 @@ const CHIPS = ["Verified reviews only", "Patient-confirmed", "Published with per
 
 export default function Testimonials() {
   return (
-    <section id="testimonials" className="bg-pink py-16 lg:py-24">
+    <section id="testimonials" className="bg-white py-16 lg:py-24">
       <div className="container-page">
         <SectionHeading
           eyebrow="Patient voices"
@@ -20,8 +20,8 @@ export default function Testimonials() {
             {TESTIMONIALS.map((review, index) => (
               <Reveal key={review.id} delay={index * 80}>
                 <figure className="card-surface h-full p-7">
-                  <QuoteIcon className="text-highlight" />
-                  <div className="mt-4 flex gap-1 text-highlight">
+                  <QuoteIcon className="text-accent" />
+                  <div className="mt-4 flex gap-1 text-accent">
                     {Array.from({ length: review.rating }).map((_, i) => (
                       <StarIcon key={i} className="h-4 w-4" />
                     ))}

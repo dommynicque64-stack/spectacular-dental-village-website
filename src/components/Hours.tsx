@@ -8,7 +8,7 @@ const todayId = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"][todayIndex];
 
 export default function Hours() {
   return (
-    <section id="hours" className="bg-white py-16 lg:py-24">
+    <section id="hours" className="bg-pink py-16 lg:py-24">
       <div className="container-page grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
         <div>
           <SectionHeading

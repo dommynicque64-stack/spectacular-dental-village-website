@@ -75,7 +75,7 @@ export default function Navbar() {
             rel="noreferrer noopener"
             className="flex items-center gap-2 text-white/75 transition-colors hover:text-white"
           >
-            <PinIcon className="h-4 w-4 text-rose" />
+            <PinIcon className="h-4 w-4 text-highlight" />
             <span>{CLINIC.locationLine}</span>
           </a>
           <div className="flex items-center gap-6">
@@ -83,11 +83,11 @@ export default function Navbar() {
               href={telLink}
               className="flex items-center gap-2 text-white/80 transition-colors hover:text-white"
             >
-              <PhoneIcon className="h-4 w-4 text-rose" />
+              <PhoneIcon className="h-4 w-4 text-highlight" />
               {CLINIC.phoneDisplay}
             </a>
             <span className="flex items-center gap-2 text-white/80">
-              <ClockIcon className="h-4 w-4 text-rose" />
+              <ClockIcon className="h-4 w-4 text-highlight" />
               Mon–Fri 8:00 AM – 8:00 PM
             </span>
             <a
@@ -95,7 +95,7 @@ export default function Navbar() {
               target="_blank"
               rel="noreferrer noopener"
               aria-label="Spectacular Dental Village on Facebook"
-              className="text-white/80 transition-colors hover:text-white"
+              className="flex h-7 w-7 items-center justify-center rounded-full bg-white transition-colors hover:scale-105"
             >
               <FacebookIcon className="h-4 w-4" />
             </a>
@@ -104,7 +104,7 @@ export default function Navbar() {
               target="_blank"
               rel="noreferrer noopener"
               aria-label="Chat with Spectacular Dental Village on WhatsApp"
-              className="text-white/80 transition-colors hover:text-white"
+              className="flex h-7 w-7 items-center justify-center rounded-full bg-white transition-colors hover:scale-105"
             >
               <WhatsAppIcon className="h-4 w-4" />
             </a>
@@ -175,7 +175,7 @@ export default function Navbar() {
             <button
               type="button"
               onClick={() => go("#booking")}
-              className="btn btn-accent btn-sm hidden md:inline-flex"
+              className="btn btn-primary btn-sm hidden md:inline-flex"
             >
               Book an Appointment
             </button>
